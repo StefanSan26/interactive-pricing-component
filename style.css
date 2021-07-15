@@ -1,0 +1,207 @@
+:root {
+  /*Colores:Aqui se van a guardar como variables*/
+  --soft-cyan: hsl(174, 77%, 80%);
+  --strong-cyan: hsl(174, 86%, 45%);
+  --Light-Grayish-Red: hsl(14, 92%, 95%);
+  --Light-Red: hsl(15, 100%, 70%);
+  --Pale-Blue: hsl(226, 100%, 87%);
+
+  --White: hsl(0, 0%, 100%);
+  --Very-Pale-Blue: hsl(230, 100%, 99%);
+  --Light-Grayish-Blue: hsl(224, 65%, 95%);
+  --Light-Grayish-Blue2: hsl(223, 50%, 87%);
+  --Grayish-Blue: hsl(225, 20%, 60%);
+  --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+	background-image: url(./images/bg-pattern.svg);
+	background-size: 300% ;	
+	/* background-position: top; */
+	background-repeat: no-repeat;
+}
+main {
+	margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	background-image:url(./images/pattern-circles.svg);
+	background-size: 25vh;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+p {
+  color: var(--Grayish-Blue);
+	font-size: 0.8rem;
+}
+.title {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: var(--Dark-Desaturated-Blue);
+	text-align: center;
+}
+.description {
+  margin-top: 1rem;
+  font-size: 1rem;
+	text-align: center;
+}
+.pricing{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin-top: 4rem;
+	margin-bottom: 50px;
+	background-color: var(--White);
+	width: 375px;
+	height: fit-content;
+	/* border: solid 2px var(--Very-Pale-Blue); */
+	box-shadow: 0px 4px 8px var(--Light-Grayish-Blue) ;
+	border-radius: 10px;
+}
+.pricing--pageviews{
+	margin: 20px;
+
+}
+.pricing-control{
+	width: 90%;
+	margin: 0 auto;
+	appearance: none;
+  height: 10px; /* Specified height */
+  background: var(--soft-cyan); /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+	/* -webkit-transition: 0.2s; */
+  transition: opacity .2s;
+  border-radius: 5px; 
+}
+
+.pricing-control:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+.pricing-control::-webkit-slider-thumb {
+  /* -webkit-appearance: none; Override default look */
+  appearance: none;
+  width: 35px; /* Set a specific slider handle width */
+  height: 35px; /* Slider handle height */
+  background: var(--strong-cyan); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%; 
+}
+
+
+.pricing--price{
+	margin-top: 2rem;
+}
+.pricing--pay{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+.pricing--pay p{
+	margin: 0 10px ;
+}
+.pricing--price__big{
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--Dark-Desaturated-Blue);
+}
+.pricing--pay__discount{
+	background-color: var(--Light-Grayish-Red);
+	color: var(--Light-Red);
+	border-radius: 15px;
+	padding: 5px;
+}
+
+.info{
+	margin: 2rem;	
+}
+.check{
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	background-image: url(./images/icon-check.svg);
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.info p{
+	margin-top: 0.5rem;
+}
+.info button{
+	margin-top: 20px;
+	background-color: var(--Dark-Desaturated-Blue);
+	color: var(--Light-Grayish-Blue2);
+	height: 40px;
+	width: 160px;
+	border-radius: 20px;
+	border: none;
+}
+.switch{
+	position: relative;  
+	display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: var(--strong-cyan);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--strong-cyan);
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
