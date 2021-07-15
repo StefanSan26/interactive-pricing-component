@@ -11,7 +11,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
-	<title>Frontend Mentor | Interactive pricing component</title>
+	<title>StefanSan26 | Interactive pricing component</title>
 
 
 </head>
@@ -23,8 +23,10 @@
 		<section class="pricing">
 			<p class="pricing--pageviews"><strong><span id="pageviews">100</span> PAGEVIEWS</strong></p>
 			<input type="range" class="pricing-control" name="quantity" value="8" min="8" max="24" step="4" id="myRange">
-			<p class="pricing--price">
-			<h2 class="pricing--price__big">$<span id="price"></span>.00</h2>/month</p>
+			<div class="pricing--price">
+				<p class="pricing--price__big">$<span id="price"></span>.00</p>
+				<p>/month</p>
+			</div>
 			<div class="pricing--pay">
 				<p class="pricing--pay__monthly">Monthly Billing</p>
 				<label class="switch">
@@ -51,7 +53,7 @@
 		const output = document.getElementById("price");
 		const views = document.getElementById("pageviews");
 		const discount = document.getElementById("checkbox");
-		var a=1;
+		var a = 1;
 		output.innerHTML = slider.value;
 		views.innerHTML = "10K";
 
@@ -61,23 +63,23 @@
 			switch (slider.value) {
 				case "8":
 					views.innerHTML = "10K";
-					output.innerHTML = slider.value*a;
+					output.innerHTML = slider.value * a;
 					break;
 				case "12":
 					views.innerHTML = "50K";
-					output.innerHTML = slider.value*a;
+					output.innerHTML = slider.value * a;
 					break;
 				case "16":
 					views.innerHTML = "100K";
-					output.innerHTML = slider.value*a;
+					output.innerHTML = slider.value * a;
 					break;
 				case "20":
 					views.innerHTML = "500K";
-					output.innerHTML = 24*a;
+					output.innerHTML = 24 * a;
 					break;
 				case "24":
 					views.innerHTML = "1M";
-					output.innerHTML = 36*a;
+					output.innerHTML = 36 * a;
 					break;
 				default:
 					console.log(slider.value);
@@ -86,12 +88,12 @@
 		}
 		function applyDiscount(e) {
 			if (e.target.checked) {
-				a=0.75;
+				a = 0.75;
 			} else {
-				a=1;
+				a = 1;
 			}
 			valor();
-			
+
 		}
 		discount.addEventListener('change', applyDiscount, false);
 

@@ -26,7 +26,7 @@ body {
   width: 100%;
 	background-image: url(./images/bg-pattern.svg);
 	background-size: 300% ;	
-	/* background-position: top; */
+	
 	background-repeat: no-repeat;
 }
 main {
@@ -64,37 +64,36 @@ p {
 	background-color: var(--White);
 	width: 375px;
 	height: fit-content;
-	/* border: solid 2px var(--Very-Pale-Blue); */
+	
 	box-shadow: 0px 4px 8px var(--Light-Grayish-Blue) ;
 	border-radius: 10px;
 }
 .pricing--pageviews{
-	margin: 20px;
+	margin: 40px;
 
 }
 .pricing-control{
 	width: 90%;
 	margin: 0 auto;
 	appearance: none;
-  height: 10px; /* Specified height */
-  background: var(--soft-cyan); /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-	/* -webkit-transition: 0.2s; */
+  height: 10px; 
+  background: var(--soft-cyan);
+  outline: none; 
+  opacity: 0.7; 
   transition: opacity .2s;
   border-radius: 5px; 
 }
 
 .pricing-control:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+  opacity: 1; 
 }
 .pricing-control::-webkit-slider-thumb {
-  /* -webkit-appearance: none; Override default look */
+ 
   appearance: none;
-  width: 35px; /* Set a specific slider handle width */
-  height: 35px; /* Slider handle height */
-  background: var(--strong-cyan); /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  width: 35px; 
+  height: 35px; 
+  background: var(--strong-cyan); 
+  cursor: pointer; 
   border-radius: 50%; 
 }
 
@@ -102,15 +101,19 @@ p {
 .pricing--price{
 	margin-top: 2rem;
 }
+.pricing--price p{
+	display: inline;
+}
 .pricing--pay{
 	display: flex;
 	justify-content: center;
-	margin-top: 20px;
+	margin-top: 40px;
 }
 .pricing--pay p{
 	margin: 0 10px ;
 }
 .pricing--price__big{
+	display: inline;
 	font-size: 2rem;
 	font-weight: bold;
 	color: var(--Dark-Desaturated-Blue);
@@ -123,7 +126,7 @@ p {
 }
 
 .info{
-	margin: 2rem;	
+	margin: 30px;	
 }
 .check{
 	display: inline-block;
@@ -138,7 +141,7 @@ p {
 	margin-top: 0.5rem;
 }
 .info button{
-	margin-top: 20px;
+	margin-top: 40px;
 	background-color: var(--Dark-Desaturated-Blue);
 	color: var(--Light-Grayish-Blue2);
 	height: 40px;
