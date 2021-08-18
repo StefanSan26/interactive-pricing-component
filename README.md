@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Here](https://stefansan26.github.io/interactive-pricing-component/)
+- Live Site URL: [Here](https://zen-fermi-fda501.netlify.app/)
 
 ## My process
 
